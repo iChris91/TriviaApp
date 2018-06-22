@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>quiz</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngIf="quiz">
+
+    <ion-card-header>Question :</ion-card-header>
+    <ion-card-content>
+      <div *ngIf="questionIsOver === false">Il reste {{ timer }} secondes !</div>
+      <div>{{quiz.question}}</div>
+      <div *ngFor="let answer of quiz.incorrect_answers">
+        <button ion-button full (click)="checkAnswer(answer)" [disabled]="questionIsOver">{{answer}}</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="result">
+    <ion-card-content>
+      <div text-center class="result">
+        {{result}}
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf="questionIsOver">
+    <button ion-button full (click)="changeQuestion()">Question suivante !</button>
+  </div>
+
+  <div *ngIf="gameIsOver">
+    <button ion-button full (click)="shareScore()">Send score !</button>
+    <img [src]="this.base64Image">
+    <button ion-button full (click)="goBackToMainMenu()">Retour au menu principal</button>
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+page-home {
+  .error {
+    color: red;
+  }
+
+  .card-header.card-header-md {
+    text-align: center;
+    font-size: 4vh;
+    text-transform: uppercase;
+    background: pink;
+    color: #222222;
+    border : 1px solid #222222;
+  }
+  ion-col.col {
+    font-size: 2vh;
+    padding: 15px;
+    border-bottom:1px solid #888888;
+    border-right:1Px solid #888888;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  ion-col.col:first-of-type {
+    text-align: left;
+  }
+  ion-col.col:last-of-type {
+    border-right:none;
+  }
+  .titleTr ion-col {
+    font-size: 3vh;
+    text-transform: uppercase;
+    background: #f4f4f4;
+  }
+  .button-md {
+    background: #222222;
+  }
+  .button-md:hover:not(.disable-hover) {
+    background: #444444;
+  }
+}
+

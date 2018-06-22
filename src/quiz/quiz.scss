@@ -1,0 +1,18 @@
+page-quiz {
+  .card-md, .card-content-md {
+    font-size: 2vh;
+  }
+  .card-header-md {
+    font-size: 2.3vh;
+  }
+    .result {
+    color: #222222;
+  }
+  .button-md {
+    background: #222222;
+  }
+  .button-md:hover:not(.disable-hover) {
+    background:#444444;
+  }
+}
+
